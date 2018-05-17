@@ -54,9 +54,25 @@ void GameStart(HWND hWindow)
   _pSmExplosionBitmap = new Bitmap(hDC, IDB_SMEXPLOSION, _hInstance);
   _pLgExplosionBitmap = new Bitmap(hDC, IDB_LGEXPLOSION, _hInstance);
   _pGameOverBitmap = new Bitmap(hDC, IDB_GAMEOVER, _hInstance);
+  _pSaucer = new Bitmap(hDC, playerRight, _hInstance);
+  _pZombie = new Bitmap(hDC, zombieRight, _hInstance);
+
+  // Set the initial saucer position and speed
+  _iSaucerX = 640 - (_pSaucer->GetWidth() / 2);
+  _iSaucerY = 360 - (_pSaucer->GetHeight() / 2);
+  _iSpeedX = 0;
+  _iSpeedY = 0;
+  relativityX = 0;
+  relativityY = 0;
+  leftClicked = false;
+  mouseX = 0;
+  mouseY = 0;
+  bulletFrameDuration = 0;
+  bulletRelativityX = 0;
+  bulletRelativityY = 0;
 
   // Create the starry background
-  _pBackground = new StarryBackground(600, 450);
+  _pBackground = new Bitmap(hDC, grass, _hInstance);
 
   // Play the background music
   _pGame->PlayMIDISong(TEXT("Music.mid"));
@@ -113,15 +129,30 @@ void GameDeactivate(HWND hWindow)
 
 void GamePaint(HDC hDC)
 {
-  // Draw the background
-  _pBackground->Draw(hDC);
+	for (int i = -5; i < 16; i++)
+	{
+		for (int j = -4; j < 12; j++)
+		{
+			_pBackground->Draw(hDC, _iSaucerX + relativityX % 125 + i * 125, _iSaucerY + relativityY % 100 + j * 100, FALSE);
+		}
+	}
 
-  // Draw the desert bitmap
-  _pDesertBitmap->Draw(hDC, 0, 371);
 
   // Draw the sprites
   _pGame->DrawSprites(hDC);
+  _pZombie->Draw(hDC, relativityX, relativityY, TRUE);
+  _pSaucer = new Bitmap(hDC, direction, _hInstance);
+  _pSaucer->Draw(hDC, _iSaucerX, _iSaucerY, TRUE);
 
+  if (leftClicked || bulletFrameDuration > 0)
+  {
+	  HPEN hBluePen = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
+	  MoveToEx(hDC, 640 + relativityX - bulletRelativityX, 360 + relativityY - bulletRelativityY, NULL);
+	  LineTo(hDC, mouseX + relativityX - bulletRelativityX, mouseY + relativityY - bulletRelativityY);
+	  leftClicked = false;
+	  bulletFrameDuration--;
+  }
+  /*
   // Draw the score
   TCHAR szText[64];
   RECT  rect = { 460, 0, 510, 30 };
@@ -137,7 +168,7 @@ void GamePaint(HDC hDC)
 
   // Draw the game over message, if necessary
   if (_bGameOver)
-    _pGameOverBitmap->Draw(hDC, 190, 149, TRUE);
+    _pGameOverBitmap->Draw(hDC, 190, 149, TRUE);*/
 }
 
 void GameCycle()
@@ -148,8 +179,6 @@ void GameCycle()
     if ((rand() % _iDifficulty) == 0)
       AddAlien();
 
-    // Update the background
-    _pBackground->Update();
 
     // Update the sprites
     _pGame->UpdateSprites();

@@ -2,7 +2,12 @@
 // Space Out Resource Identifiers
 // C++ Header - Resource.h
 //-----------------------------------------------------------------
-
+#define playerRight                     101
+#define grass                           102
+#define playerDown                      103
+#define playerUp                        104
+#define playerLeft                      105
+#define zombieRight                     106
 //-----------------------------------------------------------------
 // Icons                      Range : 1000 - 1999
 //-----------------------------------------------------------------

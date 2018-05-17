@@ -36,11 +36,24 @@ Bitmap*           _pTMissileBitmap;
 Bitmap*           _pSmExplosionBitmap;
 Bitmap*           _pLgExplosionBitmap;
 Bitmap*           _pGameOverBitmap;
-StarryBackground* _pBackground;
+Bitmap*			  _pSaucer;
+Bitmap*           _pZombie;
+Bitmap*			  _pBackground;
 Sprite*           _pCarSprite;
 int               _iFireInputDelay;
 int               _iNumLives, _iScore, _iDifficulty;
+int				  _iSaucerX, _iSaucerY;
 BOOL              _bGameOver;
+int				  _iSpeedX, _iSpeedY;
+int				  direction;
+int relativityX;
+int relativityY;
+bool leftClicked;
+int mouseX;
+int mouseY;
+int bulletFrameDuration;
+int bulletRelativityX;
+int bulletRelativityY;
 
 //-----------------------------------------------------------------
 // Function Declarations
