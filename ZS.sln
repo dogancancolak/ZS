@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpaceOut", "SpaceOut.vcxproj", "{824EC981-12EF-432C-AAAE-0D16EBA0706A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UFO", "UFO.vcxproj", "{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{824EC981-12EF-432C-AAAE-0D16EBA0706A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{824EC981-12EF-432C-AAAE-0D16EBA0706A}.Debug|Win32.Build.0 = Debug|Win32
-		{824EC981-12EF-432C-AAAE-0D16EBA0706A}.Release|Win32.ActiveCfg = Release|Win32
-		{824EC981-12EF-432C-AAAE-0D16EBA0706A}.Release|Win32.Build.0 = Release|Win32
+		{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}.Debug|Win32.Build.0 = Debug|Win32
+		{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}.Release|Win32.ActiveCfg = Release|Win32
+		{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B4B68447-F489-459F-BD0F-C8E88C2A348C}
+		SolutionGuid = {C85E8DD3-A867-49C7-9941-B6A3FA92D065}
 	EndGlobalSection
 EndGlobal

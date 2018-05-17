@@ -212,12 +212,6 @@ BOOL Bitmap::Create(HDC hDC, int iWidth, int iHeight, COLORREF crColor)
 
 void Bitmap::Draw(HDC hDC, int x, int y, BOOL bTrans, COLORREF crTransColor)
 {
-  DrawPart(hDC, x, y, 0, 0, GetWidth(), GetHeight(), bTrans, crTransColor);
-}
-
-void Bitmap::DrawPart(HDC hDC, int x, int y, int xPart, int yPart,
-  int wPart, int hPart, BOOL bTrans, COLORREF crTransColor)
-{
   if (m_hBitmap != NULL)
   {
     // Create a memory device context for the bitmap
@@ -228,10 +222,10 @@ void Bitmap::DrawPart(HDC hDC, int x, int y, int xPart, int yPart,
 
     // Draw the bitmap to the destination device context
     if (bTrans)
-      TransparentBlt(hDC, x, y, wPart, hPart, hMemDC, xPart, yPart,
-        wPart, hPart, crTransColor);
+      TransparentBlt(hDC, x, y, GetWidth(), GetHeight(), hMemDC, 0, 0,
+        GetWidth(), GetHeight(), crTransColor);
     else
-      BitBlt(hDC, x, y, wPart, hPart, hMemDC, xPart, yPart, SRCCOPY);
+      BitBlt(hDC, x, y, GetWidth(), GetHeight(), hMemDC, 0, 0, SRCCOPY);
 
     // Restore and delete the memory device context
     SelectObject(hMemDC, hOldBitmap);

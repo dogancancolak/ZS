@@ -2,71 +2,68 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{7b7880d3-9aa4-4353-8a4e-3450980bb86c}</UniqueIdentifier>
+      <UniqueIdentifier>{3540cd4f-9d69-40c4-bb47-ddc59bca8343}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{0b707ec8-c0fe-4033-9786-74d35411d875}</UniqueIdentifier>
+      <UniqueIdentifier>{8ddaacbb-a7a0-4215-b42b-c7ab228a0be3}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{11b49344-df9d-4c59-9c02-09972f90bb14}</UniqueIdentifier>
+      <UniqueIdentifier>{d33bc70c-c03d-47d5-a8dd-4e2f47f250b5}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AlienSprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Background.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Bitmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SpaceOut.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
+    <ClCompile Include="ZS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AlienSprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Bitmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ZS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SpaceOut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="SpaceOut.ico">
+    <Image Include="Background.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="SpaceOut_sm.ico">
+    <Image Include="playerRight.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="grass.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="playerDown.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="playerUp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="playerLeft.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="zombieRight.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="SpaceOut.rc">
+    <ResourceCompile Include="ZS.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

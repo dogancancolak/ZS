@@ -2,8 +2,8 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8,00"
-	Name="SpaceOut"
-	ProjectGUID="{824EC981-12EF-432C-AAAE-0D16EBA0706A}"
+	Name="UFO"
+	ProjectGUID="{6AD4C90D-D6A7-4A19-841E-1BE80E6FB121}"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -19,7 +19,7 @@
 			OutputDirectory="Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -60,11 +60,12 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="winmm.lib msimg32.lib"
-				OutputFile="$(OutDir)/SpaceOut.exe"
+				AdditionalDependencies="msimg32.lib"
+				OutputFile="$(OutDir)/UFO.exe"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile="$(OutDir)/SpaceOut.pdb"
+				ProgramDatabaseFile="$(OutDir)/UFO.pdb"
 				SubSystem="2"
 				TargetMachine="1"
 			/>
@@ -98,7 +99,7 @@
 			OutputDirectory="Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -141,9 +142,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="winmm.lib msimg32.lib"
-				OutputFile="$(OutDir)/SpaceOut.exe"
+				AdditionalDependencies="msimg32.lib"
+				OutputFile="$(OutDir)/UFO.exe"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -184,14 +186,6 @@
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
 			>
 			<File
-				RelativePath="AlienSprite.cpp"
-				>
-			</File>
-			<File
-				RelativePath="Background.cpp"
-				>
-			</File>
-			<File
 				RelativePath="Bitmap.cpp"
 				>
 			</File>
@@ -200,11 +194,7 @@
 				>
 			</File>
 			<File
-				RelativePath="SpaceOut.cpp"
-				>
-			</File>
-			<File
-				RelativePath="Sprite.cpp"
+				RelativePath="UFO.cpp"
 				>
 			</File>
 		</Filter>
@@ -212,14 +202,6 @@
 			Name="Header Files"
 			Filter="h;hpp;hxx;hm;inl;inc"
 			>
-			<File
-				RelativePath="AlienSprite.h"
-				>
-			</File>
-			<File
-				RelativePath="Background.h"
-				>
-			</File>
 			<File
 				RelativePath="Bitmap.h"
 				>
@@ -233,11 +215,7 @@
 				>
 			</File>
 			<File
-				RelativePath="SpaceOut.h"
-				>
-			</File>
-			<File
-				RelativePath="Sprite.h"
+				RelativePath="UFO.h"
 				>
 			</File>
 		</Filter>
@@ -246,15 +224,15 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 			>
 			<File
-				RelativePath="SpaceOut.ico"
+				RelativePath="UFO.ico"
 				>
 			</File>
 			<File
-				RelativePath="SpaceOut.rc"
+				RelativePath="UFO.rc"
 				>
 			</File>
 			<File
-				RelativePath="SpaceOut_sm.ico"
+				RelativePath="UFO_sm.ico"
 				>
 			</File>
 		</Filter>
