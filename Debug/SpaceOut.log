@@ -1,9 +1,0 @@
-﻿  Sprite.cpp
-  SpaceOut.cpp
-  GameEngine.cpp
-  Bitmap.cpp
-  Background.cpp
-  AlienSprite.cpp
-  Kod Üretiliyor...
-AlienSprite.obj : warning LNK4075: '/EDITANDCONTINUE' belirtimi nedeniyle '/SAFESEH' yoksayılıyor
-  SpaceOut.vcxproj -> C:\Users\dogan\Desktop\ZS\Debug\SpaceOut.exe
