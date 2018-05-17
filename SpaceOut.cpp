@@ -41,7 +41,7 @@ void GameStart(HWND hWindow)
 
   // Create and load the bitmaps
   HDC hDC = GetDC(hWindow);
-  _pDesertBitmap = new Bitmap(hDC, IDB_DESERT, _hInstance);
+  /*_pDesertBitmap = new Bitmap(hDC, IDB_DESERT, _hInstance);
   _pCarBitmap = new Bitmap(hDC, IDB_CAR, _hInstance);
   _pSmCarBitmap = new Bitmap(hDC, IDB_SMCAR, _hInstance);
   _pMissileBitmap = new Bitmap(hDC, IDB_MISSILE, _hInstance);
@@ -53,7 +53,7 @@ void GameStart(HWND hWindow)
   _pTMissileBitmap = new Bitmap(hDC, IDB_TMISSILE, _hInstance);
   _pSmExplosionBitmap = new Bitmap(hDC, IDB_SMEXPLOSION, _hInstance);
   _pLgExplosionBitmap = new Bitmap(hDC, IDB_LGEXPLOSION, _hInstance);
-  _pGameOverBitmap = new Bitmap(hDC, IDB_GAMEOVER, _hInstance);
+  _pGameOverBitmap = new Bitmap(hDC, IDB_GAMEOVER, _hInstance);*/
   _pSaucer = new Bitmap(hDC, playerRight, _hInstance);
   _pZombie = new Bitmap(hDC, zombieRight, _hInstance);
 
@@ -91,7 +91,7 @@ void GameEnd()
   DeleteDC(_hOffscreenDC);  
 
   // Cleanup the bitmaps
-  delete _pDesertBitmap;
+  /*delete _pDesertBitmap;
   delete _pCarBitmap;
   delete _pSmCarBitmap;
   delete _pMissileBitmap;
@@ -103,7 +103,7 @@ void GameEnd()
   delete _pTMissileBitmap;
   delete _pSmExplosionBitmap;
   delete _pLgExplosionBitmap;
-  delete _pGameOverBitmap;
+  delete _pGameOverBitmap;*/
 
   // Cleanup the background
   delete _pBackground;
